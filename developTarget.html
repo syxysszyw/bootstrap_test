@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/wq_common.css" rel="stylesheet">
+    <link href="css/wq.component.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #myDiv{
+        width: 200px;
+        height:200px;
+        border: 1px #000 solid;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <input type="text" id="pickUpLocationID">
+      <input type="text" id="dropOffLocationID">
+    <div id="pickUpLocationSelect" class="city_select_wrapper" style="top: 226px; left: 304.5px; display: block;">          
+      <div class="city_select_mask hide" style="display: none;"></div>          
+      <i class="city_select_close_btn"></i>         
+      <div class="select_head">           
+        <h1 class="select_title">取车地点</h1>            
+        <div class="search_wrapper hide">             
+          <a href="javascript:;" class="search_btn"></a>              
+          <input id="searchCarInput" type="text" class="search_input" data-original="输入城市(支持中英文)" value="输入城市(支持中英文)">            
+        </div>          
+      </div>          
+      <div class="select_body wq_clearfix">           
+        <ul class="letter_list">              
+          <li class="letter_title">城市</li>              
+          <li class="letter_tag" data-id="A">A</li>             
+          <li class="letter_tag" data-id="B">B</li>             
+          <li class="letter_tag" data-id="C">C</li>             
+          <li class="letter_tag" data-id="D">D</li>             
+          <li class="letter_tag" data-id="E">E</li>             
+          <li class="letter_tag" data-id="F">F</li>             
+          <li class="letter_tag" data-id="G">G</li>             
+          <li class="letter_tag" data-id="H">H</li>             
+          <li class="letter_tag" data-id="I">I</li>             
+          <li class="letter_tag" data-id="J">J</li>             
+          <li class="letter_tag" data-id="K">K</li>             
+          <li class="letter_tag" data-id="L">L</li>             
+          <li class="letter_tag" data-id="M">M</li>             
+          <li class="letter_tag" data-id="N">N</li>             
+          <li class="letter_tag" data-id="O">O</li>             
+          <li class="letter_tag" data-id="P">P</li>             
+          <li class="letter_tag" data-id="Q">Q</li>             
+          <li class="letter_tag" data-id="R">R</li>             
+          <li class="letter_tag" data-id="S">S</li>             
+          <li class="letter_tag" data-id="T">T</li>             
+          <li class="letter_tag" data-id="U">U</li>             
+          <li class="letter_tag" data-id="V">V</li>             
+          <li class="letter_tag" data-id="W">W</li>             
+          <li class="letter_tag" data-id="X">X</li>             
+          <li class="letter_tag" data-id="Y">Y</li>             
+          <li class="letter_tag" data-id="Z">Z</li>           
+        </ul>           
+        <div class="city_list_wrapper">
+          <div class="city_box table_box wq_clearfix">             
+            <h2 class="city_list_title">美国热门城市</h2>             
+            <div class="hot_city_table">
+              <p data-key="Other,Boston" data-tag="B">波士顿</p>
+              <p data-key="California,Los Angeles" data-tag="L">洛杉矶</p>
+              <p data-key="Other,Hawaii - Oahu Island" data-tag="H">檀香山</p>
+              <p data-key="Other,Houston" data-tag="H">休斯顿</p>
+              <p data-key="Florida,Miami" data-tag="M">迈阿密</p>
+              <p data-key="new_york" data-tag="N">纽约</p>
+              <p data-key="Florida,Orlando" data-tag="O">奥兰多</p>
+              <p data-key="Other,Philadelphia" data-tag="P">费城</p>
+              <p data-key="Other,Salt Lake City" data-tag="S">盐湖城</p>
+              <p data-key="California,San Francisco" data-tag="S">旧金山</p>
+              <p data-key="Other,Seattle" data-tag="S">西雅图</p>
+              <p data-key="Other,Washington DC" data-tag="W">华盛顿</p>
+              <p data-key="Other,Denver" data-tag="D">丹佛</p>
+              <p data-key="Other,Chicago" data-tag="C">芝加哥</p>
+              <p data-key="California,San Diego" data-tag="S">圣地亚哥</p>
+              <p data-key="Other,New Orleans" data-tag="N">新奥尔良</p>
+              <p data-key="Las Vegas,Las Vegas" data-tag="L">拉斯维加斯</p>
+              <p data-key="Other,Detroit" data-tag="D">底特律</p>
+              <p data-key="Other,Bozeman" data-tag="B">波兹曼(黄石)</p>
+              <p data-key="Other,Atlanta" data-tag="A">亚特兰大</p></div></div>
+
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectA" class="city_list_title">A</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Akron" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Akron</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    
+    <li data-key="Other,Allentown" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Allentown</span>
+        <span class="city_cn_name"></span>
+      </div>
+  </li>
+  </ul>
+</div>
+
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectB" class="city_list_title">B</h2>
+  <ul class="vertical_city_list">
+    <li data-key="California,Bakersfield" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Bakersfield</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Baltimore" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Baltimore</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectC" class="city_list_title">C</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Calumet" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Calumet</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Florida,Cape Canaveral" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Cape Canaveral</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectD" class="city_list_title">D</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Dallas" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Dallas</span>
+        <span class="city_cn_name">达拉斯</span>
+      </div>
+    </li>
+    <li data-key="Florida,Dania" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Dania</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectE" class="city_list_title">E</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,El Paso" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">El Paso</span>
+        <span class="city_cn_name">埃尔帕索</span>
+      </div>
+    </li>
+    <li data-key="New York,Elmira" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Elmira</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectF" class="city_list_title">F</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Fairbanks" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Fairbanks</span>
+        <span class="city_cn_name">费尔班克斯</span>
+      </div>
+    </li>
+    <li data-key="Other,Fargo" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Fargo</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectG" class="city_list_title">G</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Florida,Gainesville" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Gainesville</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Glendale" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Glendale</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Grand Forks" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Grand Forks</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectH" class="city_list_title">H</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Hawaii - Oahu Island" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Honolulu</span>
+        <span class="city_cn_name">檀香山</span>
+      </div>
+    </li>
+    <li data-key="Other,Harlingen" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Harlingen</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectI" class="city_list_title">I</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Idaho Falls" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Idaho Falls</span>
+        <span class="city_cn_name">爱达荷瀑布</span>
+      </div>
+    </li>
+    <li data-key="Other,Indianapolis" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Indianapolis</span>
+        <span class="city_cn_name">印第安纳波里</span>
+      </div>
+    </li>
+    <li data-key="Other,Iselin" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Iselin</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="New York,Islip" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Islip</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectJ" class="city_list_title">J</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Jackson" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Jackson</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Jackson Hole" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Jackson Hole</span>
+        <span class="city_cn_name">杰克逊机场</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectK" class="city_list_title">K</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Kalamazoo" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Kalamazoo</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Kalispell" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Kalispell</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectL" class="city_list_title">L</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,La Crosse" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">La Crosse</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="New York,La Guardia Airport" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">La Guardia Airport</span>
+        <span class="city_cn_name">拉瓜迪亚机场</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectM" class="city_list_title">M</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Madison" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Madison</span>
+        <span class="city_cn_name">麦迪逊</span>
+      </div>
+    </li>
+    <li data-key="Other,Manchester" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Manchester</span>
+        <span class="city_cn_name">曼彻斯特</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectN" class="city_list_title">N</h2>
+  <ul class="vertical_city_list">
+    <li data-key="new_york" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">new york</span>
+        <span class="city_cn_name">纽约</span>
+      </div>
+    </li>
+    <li data-key="Florida,Naples" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Naples</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectO" class="city_list_title">O</h2>
+  <ul class="vertical_city_list">
+    <li data-key="California,Oakland" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Oakland</span>
+        <span class="city_cn_name">奥克兰</span>
+      </div>
+    </li>
+    <li data-key="Other,Oklahoma City" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Oklahoma City</span>
+        <span class="city_cn_name">奥克拉荷马城</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectP" class="city_list_title">P</h2>
+  <ul class="vertical_city_list">
+    <li data-key="California,Palm Springs" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Palm Springs</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Florida,Panama City" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Panama City</span>
+        <span class="city_cn_name">巴拿马城</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectR" class="city_list_title">R</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Raleigh" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Raleigh</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Rapid City" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Rapid City</span>
+        <span class="city_cn_name">拉皮德城</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectS" class="city_list_title">S</h2>
+  <ul class="vertical_city_list">
+    <li data-key="California,Sacramento" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Sacramento</span>
+        <span class="city_cn_name">萨克拉门托</span>
+      </div>
+    </li>
+    <li data-key="Other,Saginaw" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Saginaw</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectT" class="city_list_title">T</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Florida,Tallahassee" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Tallahassee</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Florida,Tampa" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Tampa</span>
+        <span class="city_cn_name">坦帕</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectV" class="city_list_title">V</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Vail Eagle" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Vail Eagle</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectW" class="city_list_title">W</h2>
+  <ul class="vertical_city_list">
+    <li data-key="Other,Warwick" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Warwick</span>
+        <span class="city_cn_name"></span>
+      </div>
+    </li>
+    <li data-key="Other,Washington DC" class="wq_clearfix">
+      <div class="city_name wq_clearfix">
+        <span class="city_en_name">Washington DC</span>
+        <span class="city_cn_name">华盛顿</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectX" class="city_list_title">X</h2>
+  <ul class="vertical_city_list"></ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectY" class="city_list_title">Y</h2>
+  <ul class="vertical_city_list"></ul>
+</div>
+<div class="city_box list_box">
+  <h2 id="pickUpLocationSelectZ" class="city_list_title">Z</h2>
+  <ul class="vertical_city_list"></ul>
+</div>
+</div>          </div>        </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/rentcar.js"></script>
+    <script type="text/javascript">
+  
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<a href="http://www.baidu.com" id="othersite1">www.baidu.com</a>
+	<a href="http://www.sina.com" id="othersite2">www.sina.com</a>
+	<a href="http://www.taobao.com" id="othersite3">www.taobao.com</a>
+	<script type="text/javascript">
+		var hrefArray = new Array();
+	$("a").each(function(){
+		if($(this).attr("href").indexOf("taobao.com")== -1){
+			hrefArray.push($(this).attr("id"));
+		}
+	});
+
+	var len = hrefArray.length;
+	
+	for(var i = 0; i< len; i++){
+		$(document).on("click", '#'+hrefArray[i], function(event){
+			if(confirm("此链接非淘宝域名下的链接，您是否继续访问？")){
+				var href = $(event.target).attr("href");
+				if(event.preventDefault){
+				    event.preventDefault();
+		    	}else{
+			    	event.returnValue = false;
+			    }
+				window.open(href);
+			}
+		})
+	}
+	</script>
+</body>
+</html>

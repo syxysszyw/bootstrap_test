@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function mySort(){
+			var args = new Array();
+			args = Array.prototype.slice.call(arguments);
+			args.sort(function(a,b){return a>b?1:-1});
+			return args;
+		}
+
+		var result = mySort( 50, 11, 16, 32, 24, 99, 57, 100, 200 ); // 传入的参数个数不定
+		console.info( result ); 
+	</script>
+</body>
+</html>

@@ -1,0 +1,741 @@
+﻿/* ------- *\
+   checkbox
+\* ------- */
+.comp_checkbox {
+	position: relative;
+	padding-left: 25px;
+}
+
+.comp_checkbox i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background: url(//dn-woqu.qbox.me/7099/img/common/checkbox-btn.png) no-repeat 0 -6px;
+}  
+
+.comp_active_checkbox i {
+	height: 30px;
+	width: 30px;
+	top: -6px;
+	left: 0;
+	background: url(//dn-woqu.qbox.me/7099/img/common/checkbox-btn.png) no-repeat -37px 0;
+}
+
+.comp_checkbox i:hover {
+	cursor: pointer;
+}
+
+/* ---------- *\
+   error tips
+\* ---------- */
+#errorTips {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 24px;
+	line-height: 24px;
+	z-index: 999;
+	font-size: 14px;
+	color: #f5f6f6;
+	padding: 0 5px;
+	background-color: #e77741;
+	display: none;
+}
+
+/* ----------- *\
+   placeholder
+\* ----------- */
+.wq_place_holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+	cursor: text;
+}
+
+
+/* ----------- *\
+   hover tips
+\* ----------- */
+.wq_hover_tips_down, .wq_hover_tips_up {
+	display: none;
+	position: absolute;
+	padding-top:0px;
+	border:1px #35b9b9 solid;
+	font-size: 14px;
+	background-color:white;
+}
+
+.wq_hover_tips_down i {
+	position: absolute;
+	top: -12px;
+	left: 45%;
+	width: 28px;
+	height: 13px;
+	background: url(//dn-woqu.qbox.me/11160/img/common/room_table_sharp.png) no-repeat;
+}
+
+.wq_hover_tips_up i {
+	position: absolute;
+	bottom: -7px;
+	left: 47%;
+	width: 15px;
+	height: 8px;
+	background: url(//dn-woqu.qbox.me/6731/img/common/d-triangle-up.png) no-repeat;
+}
+.wq_tips_content_title{
+	background-color: #d4f5f5;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	padding-left: 26px;
+	color: #06a6a6;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.wq_tips_content {
+	color: #000;
+	line-height: 20px;
+	font-size:13px;
+	font-family:"微软雅黑";
+	padding:26px;
+}
+
+/* ----------------------- *\
+   hover tips for rentcar
+   add by hobert.jing
+\* ----------------------- */
+.wq_rentcar_hover_tips_down, .wq_rentcar_hover_tips_up {
+	display: none;
+	position: absolute;
+	padding: 18px 20px;
+	border: 1px solid #35b9b9;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.wq_rentcar_hover_tips_down i {
+	position: absolute;
+	top: -7px;
+	left: 47%;
+	width: 15px;
+	height: 8px;
+	background: url(//dn-woqu.qbox.me/6731/img/common/d-triangle-down.png) no-repeat;
+}
+
+.wq_rentcar_hover_tips_up i {
+	position: absolute;
+	bottom: -7px;
+	left: 47%;
+	width: 15px;
+	height: 8px;
+	/*background: url(//dn-woqu.qbox.me/11501/img/common/woqu-all.png) no-repeat -77px -970px;*/
+}
+
+.wq_rentcar_tips_content {
+	color: #000;
+	line-height: 20px;
+}
+
+
+/* ----------------- *\
+   search car loading
+\* ----------------- */
+.wq_loading_outter {
+	height: 140px;
+	width: 100%;
+	border: 1px solid #cfe2e2;
+	margin-top: 20px;
+}
+.wq_loading_inner {
+	position: relative;
+	color: #03a7a7;
+	font-size: 20px;
+	height: 31px;
+	line-height: 31px;
+	margin: 55px auto 0 auto;
+	padding-left: 45px;
+	/*background: url(//dn-woqu.qbox.me/5282/img/common/loading.gif) no-repeat;*/
+}
+
+/* ---------- *\
+     slider
+\* ---------- */
+.wq_banner_wrapper {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+
+.wq_slider_list {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.wq_slider_item {
+	float: left;
+	height: 100%;
+}
+
+.wq_slider_item a {
+	display: block;
+	height: 100%;
+}
+
+.wq_btn_list {
+	position: absolute;
+	width: auto;
+	right: 20px;
+	bottom: 5px;
+}
+
+.wq_btn_item {
+	float: left;
+	margin-right: 10px;
+	background-image: url(//dn-woqu.qbox.me/11501/img/common/woqu-all.png);
+	background-position: 0 -102px;
+}
+
+.wq_btn_item:hover {
+	cursor: pointer;
+	background-position: 0 -124px;
+}
+
+.wq_btn_active {
+	background-position: 0 -124px;
+}
+
+.wq_pn_btn {
+	display: block;
+	position: absolute;
+	height: 35px;
+	width: 25px;
+	margin-top: -12px;
+	top: 50%;
+	background-image: url(//dn-woqu.qbox.me/6820/img/common/prev-next-btn.png);
+}
+
+.wq_prev_btn {
+	background-position: -12px -88px;
+}
+
+.wq_next_btn {
+	background-position: -346px -87px;
+}
+
+/* ------------- *\
+   rent car city
+\* ------------- */
+.city_select_wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 456px;
+	height: 624px;
+	background-color: #fff;
+	border: 1px solid #cfdfdf;
+	z-index: 1000;
+}
+
+.city_select_close_btn {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	background: url(http://dn-woqu.qbox.me/11693/img/common/woqu-rentcar-all.png) no-repeat -185px -416px;
+}
+
+.select_head {
+	padding: 0 12px 25px 12px;
+}
+
+.select_title {
+	font-size: 16px;
+	line-height: 16px;
+	padding: 16px 0;
+	color: #333;
+}
+
+.search_wrapper {
+	position: relative;
+	width: 408px;
+	height: 36px;
+	border: 1px solid #b7c5c5;
+	overflow: hidden;
+}
+
+input.search_input {
+	border: none;
+	height: 30px;
+	width: 365px;
+	font-size: 13px;
+	color: #848484;
+}
+
+.search_btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(http://dn-woqu.qbox.me/11693/img/common/woqu-rentcar-all.png) no-repeat -229px -406px;
+}
+
+.select_body {
+	position: relative;
+}
+
+.letter_list {
+	position: absolute;
+	left: 12px;
+	top: 0;
+	width: 28px;
+	height: 494px;
+	border: 1px solid #cfdfdf;
+	text-align: center;
+}
+
+.letter_list li {
+	text-align: center;
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	color: #848484;
+}
+
+.letter_tag:hover {
+	color: #f07c00;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+li.letter_title {
+	font-size: 13px;
+	color: #f07c00;
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+.city_list_wrapper {
+	position: absolute;
+	left: 60px;
+	top: 0;
+	width: 394px;
+	height: 495px;
+	overflow-y: scroll;
+}
+
+.city_list_title {
+	font-size: 13px;
+	color: #f07c00;
+	font-weight: bold;
+	background-color: #f7f7f7;
+	height: 28px;
+	width: 362px;
+	line-height: 28px;
+	text-indent: 10px;
+	margin-top: 0;
+}
+
+.hot_city_table {
+	font-size: 13px;
+	width: 362px;
+	color: #848484;
+	table-layout: fixed;
+}
+
+.hot_city_table p {
+	float: left;
+	width: 90px;
+	padding: 7px 0;
+}
+
+.hot_city_table p:hover {
+	color: #f07c00;
+	cursor: pointer;
+}
+
+.list_box {
+	padding-top: 10px;
+}
+
+.vertical_city_list {
+	width: 362px;
+}
+
+.vertical_city_list > li {
+	font-size: 13px;
+	color: #848484;
+	line-height: 28px;
+	text-indent: 10px;
+}
+
+.city_name {
+	float: left;
+	width: 100%;
+}
+
+.city_name:hover {
+	cursor: pointer;
+	color: #fff;
+	/*background: url(http://dn-woqu.qbox.me/11693/img/common/woqu-rentcar-all.png) no-repeat -380px -534px #03a7a7;*/
+}
+
+.city_name.active {
+	color: #fff;
+	background: url(http://dn-woqu.qbox.me/11693/img/common/woqu-rentcar-all.png) no-repeat -380px -534px #03a7a7;
+}
+
+.city_en_name {
+	float: left;
+}
+
+.city_cn_name {
+	float: right;
+	margin-right: 30px;
+}
+
+.vertical_shop_list {
+	float: left;
+	width: 100%;
+	line-height: 44px;
+	background-color: #d2f7f7;
+	display: none;
+}
+
+.vertical_shop_list p {
+	text-indent: 20px;
+}
+
+.vertical_shop_list p:hover {
+	cursor: pointer;
+}
+
+.city_select_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 456px;
+	height: 624px;
+	background: url(//dn-woqu.qbox.me/5282/img/common/loading.gif) no-repeat #fff 220px 300px;
+	z-index: 1000;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+/* ------------- *\
+     alert msg
+\* ------------- */
+
+.alert_msg{
+	position:absolute;
+	z-index:10;
+	display:none;
+	padding:5px;
+	color:#e77741;
+	font-size:14px;
+}
+.alert_msg_error{
+	padding-left:26px;
+	color:#e77741;
+	background:url('//dn-woqu.qbox.me/6103/img/common/login-error.png') no-repeat 0 50%;
+}
+.alert_msg_suc{
+	padding-left:26px;color:#00A5A5 !important;
+	background:url('//dn-woqu.qbox.me/6103/img/common/order-success.png') no-repeat 0 50%;
+}
+.alert_msg_tips{
+    color:#00A5A5 !important;
+}
+
+/* ------------ *\
+    activities
+\* ------------ */
+/* .car_give_sim_mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+	background: url(//dn-woqu.qbox.me/6103/img/common/bg_block03.png) repeat;
+}
+
+.car_give_sim_dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 800px;
+	margin-top: -210px;
+	margin-left: -400px;
+	background-color: #fff;
+	border: 1px solid #00a5a5;
+}
+
+.cgs_close_icon {
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background: url(//dn-woqu.qbox.me/11501/img/common/woqu-all.png) no-repeat 0 -931px;
+}
+
+.car_give_sim_title {
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	background-color: #f1f1f1;
+	text-align: center;
+	font-size: 16px;
+	color: #e77741;
+	font-weight: 700;
+}
+
+.car_give_sim_content {
+	padding: 25px 40px;
+}
+
+.car_give_sim_subtitle {
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: 700;
+	color: #e77741;
+}
+
+.car_give_sim_subtitle span {
+	font-size: 14px;
+	color: #333;
+	margin-left: 10px;
+}
+
+.cgs_divide {
+	height: 0;
+	border-bottom: 1px dashed #999;
+	padding-top: 20px;
+}
+
+.car_give_sim_detail {
+	padding-top: 25px;
+}
+
+.cgs_detail_left {
+	float: left;
+	width: 347px;
+}
+
+.cgs_detail_right {
+	float: left;
+	width: 305px;
+	margin-left: 50px;
+}
+
+.content_title {
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 700;
+	color: #333;
+	padding-bottom: 25px;2
+}
+
+.activity_title {
+	font-size: 12px;
+	color: #333;
+	padding-bottom: 7px;
+}
+
+.activity_title span {
+	font-weight: 700;
+	color: #e77741;
+}
+
+.sim_info {
+	border: 1px solid #e77741;
+	height: 66px;
+}
+
+.sim_price {
+	float: left;
+	font-size: 14px;
+	color: #e77741;
+	font-weight: 700;
+	padding: 0 5px 0 50px;
+	text-align: center;
+	height: 100%;
+	border-right: 1px solid #e77741;
+	background: url(//dn-woqu.qbox.me/11501/img/common/woqu-all.png) no-repeat -385px -879px #ffffcc;
+}
+
+.sim_price p {
+	padding-top: 26px;
+}
+
+.sim_detail {
+	float: left;
+	font-size: 12px;
+	line-height: 18px;
+	width: 203px;
+	padding: 6px 16px;
+}
+
+.cgs_detail_right p {
+	font-size: 12px;
+	color: #333;
+	line-height: 20px;
+	padding-left: 16px;
+	text-indent: -16px;
+} */
+
+/* ------------ *\
+   price promise
+\* ------------ */
+/* .promise_wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.our_promise_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	filter: alpha(filter=50);
+}
+
+.our_promise_dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 750px;
+	height: 604px;
+	margin-top: -302px;
+	margin-left: -375px;
+	border: 1px solid #098080;
+	background-color: #fff;
+}
+
+.promise_title {
+	background-color: #aaebeb;
+	font-size: 18px;
+	color: #098080;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 17px;
+}
+
+.promise_detail {
+	padding: 0 17px;
+}
+
+.promise_detail h2 {
+	position: relative;
+	font-size: 14px;
+	line-height: 17px;
+	color: #333;
+	font-weight: bold;
+	text-indent: 8px;
+	padding: 30px 0 15px 0;
+}
+
+.promise_detail h2 i {
+	position: absolute;
+	display: block;
+	width: 3px;
+	height: 17px;
+	background-color: #098080;
+}
+
+.promise_text {
+	font-size: 13px;
+	color: #333;
+	line-height: 24px;
+}
+
+.payback_step {
+	position: relative;
+	width: 716px;
+	height: 74px;
+	background: url(//dn-woqu.qbox.me/9938/img/common/promise-bg.jpg) no-repeat center;
+}
+
+.payback_step li {
+	position: absolute;
+	font-size: 18px;
+	font-weight: bold;
+	color: #098080;
+	font-family: "微软雅黑";
+}
+
+.step1 {
+	top: 15px;
+	left: 75px;
+}
+
+.step2 {
+	top: 15px;
+	left: 255px;
+}
+
+.step3 {
+	top: 25px;
+	left: 435px;
+}
+
+.step4 {
+	top: 15px;
+	left: 603px;
+}
+
+.btn_wrapper {
+	padding-top: 30px;
+}
+
+.close_promise_dialog {
+	display: block;
+	width: 104px;
+	height: 36px;
+	font-size: 18px;
+	color: #fff;
+	line-height: 36px;
+	margin: 0 auto;
+	background-color: #f08300;
+	text-align: center;
+	font-family: "微软雅黑";
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">提交</button>
+</body>
+<script>
+	var EventUtil = {
+		addHandler: function(element, type, handler){
+			if(element.addEventListener){
+				element.addEventListener(type, handler, false);
+			}else if(element.attachEvent){
+				element.attachEvent("on"+type, handler);
+			}else{
+				element["on"+type] = handler;
+			}
+		},
+		getEvent: function(event){
+			return event ? event : window.event;
+		},
+		getTarget: function(event){
+			return event.target || event.srcElement;
+		},
+		preventDefault: function(event){
+			if(event.preventDefault){
+				event.preventDefault();
+			}else{
+				event.returnValue = false;
+			}
+		}, 
+		removeHandler: function(element, type, handler){
+			if(element.removeEventListener){
+				element.removeEventListener(type, handler, false);
+			}else if(element.detachEvent){
+				element.detachEvent("on"+type, handler);
+			}else{
+				element["on"+type] = null;
+			}
+		},
+		stopPropagation: function(event){
+			if(event.stopPropagation){
+				event.stopPropagation();
+			}else{
+				event.cancelBubble = true;
+			}
+		}
+	}
+
+	var btn = document.getElementById("btn");
+
+	var handler = function(event){
+		switch(event.type){
+			case "click":
+				console.log("clicked");
+				break;
+			case "mouseover":
+				event.target.style.backgroundColor = "red";
+				break;
+			case "mouseout":
+				event.target.style.backgroundColor = "";
+				break;
+		}
+	}
+
+	btn.onclick = handler;
+	btn.onmouseover = handler;
+	btn.onmouseout = handler;
+
+	// var _body = document.getElementsByTagName("body");
+	EventUtil.addHandler(btn, "click", function(event){
+		event = EventUtil.getEvent(event);
+		console.log("client coordinates:" + event.clientX+", "+ event.clientY);  //客户端坐标信息，不包括页面滚动距离，能知道鼠标是在视口中什么位置发生的。
+		console.log("client coordinates:" + event.pageX+", "+ event.pageY);  //页面坐标信息，能知道事件是在页面中的什么位置发生的。这两个属性是从页面本身而非视口的左边和顶边计算的。
+		console.log("client coordinates:" + event.screenX+", "+ event.screenY);  //屏幕坐标位置，是相对于整个电脑屏幕的位置
+
+	});
+
+	//IE8及更早版本不支持事件对象中的页面坐标，可以使用客户区坐标和滚动信息计算
+	EventUtil.addHandler(btn, "click", function(event){
+		event = EventUtil.getEvent(event);
+		var pageX = event.pageX,
+			pageY = event.pageY;
+		if(pageX === undefined){
+			pageX = event.clientX + (document.body.scrollLeft)||(document.documentElement.scrollLeft);
+		}
+		if(pageY === undefined){
+			pageY = event.clientY + (document.body.scrollTop)||(document.documentElement.scrollTop);
+		}
+	})
+
+
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>testalibaba</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	
+	
+	// console.log("href: "+window.location.href);
+	// console.log("protocol: "+window.location.protocol);
+	// console.log("protocollength: "+window.location.protocol.length);
+	// console.log("host: "+window.location.host);
+	// console.log("name: "+window.location.hostname);
+	// console.log("port: "+window.location.port);
+	// console.log("pathname: "+window.location.pathname);
+	// console.log("search: "+window.location.search);
+	// console.log("hash: "+window.location.hash);
+
+	function parseURL(){
+		var result="", query="", hash="", winLocSear="", jinIndex="";
+		winLocSear = window.location.search;
+		jinIndex = winLocSear.indexOf("#");
+		query = winLocSear.slice(1, jinIndex);
+		if(jinIndex != -1){	
+			hash = winLocSear.slice(jinIndex+1);
+		}
+		return "scheme: "+ window.location.protocol.slice(0, window.location.protocol.length-1) + "\n" + "slash: //" + "\n" + "host: " + window.location.hostname + "\n" + "port: "+ window.location.port + "\n" + "path: "+ window.location.pathname + "\n"+ "query: "+ query + "\n" + "hash: "+ hash + "\n";
+	}
+	console.log(parseURL());
+</script>	
+</body>
+</html>

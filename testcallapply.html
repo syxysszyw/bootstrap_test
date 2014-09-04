@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+  <body>  
+        <script type="text/javascript">  
+            function baseA()        // base Class A  
+            {  
+                this.member = "baseA member";  
+                this.showSelfA = function()  
+                {  
+                    window.alert(this.member);  
+                }  
+            }  
+              
+            function baseB()        // base Class B  
+            {  
+                this.member = "baseB member";  
+                this.showSelfB = function()  
+                {  
+                    window.alert(this.member);  
+                }  
+            }  
+              
+            function extendAB()     // Inherit Class from A and B  
+            {  
+                baseA.call(this);   // call for A  
+                baseB.call(this);   // call for B  
+            }  
+              
+            window.onload = function()  
+            {  
+                var extend = new extendAB();      
+                extend.showSelfA();     // show A  
+                extend.showSelfB();     // show B  
+            }  
+        </script>  
+    </body>  
+</html>

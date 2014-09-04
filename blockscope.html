@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      textarea{resize: none;}
+      * { margin:0; padding:0; }
+
+      div.centent {
+         float:left;
+         text-align: center;
+         margin: 10px;
+      }
+      span { 
+        margin:2px 2px;
+        padding:4px 10px; 
+        background:#898989;
+        cursor:pointer;
+        font-size:12px;
+        color:white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn btn-success" type="button" id="large">large</button>
+      <button class="btn btn-danger" type="button" id="small">small</button>
+      <button class="btn btn-success" type="button" id="up">up</button>
+      <button class="btn btn-danger" type="button" id="down">down</button>
+      <textarea name="textarea1" id="textarea1" cols="10" rows="10" class="form-control" row="4" col="20"></textarea>
+
+      <input type="checkbox" name="items" value="football" checked>football
+      <input type="checkbox" name="items" value="basketball">basketball
+      <input type="checkbox" name="items" value="tennis">tennis
+      <input type="checkbox" name="items" value="swimming">swimming
+      <input type="checkbox" name="items" value="running">running
+      |
+      <input type="button" value="all" id="selectAll">
+      <input type="button" value="none" id="selectNone">
+      <input type="button" value="opposite" id="opposite">
+      <input type="button" value="send" id="submitbtn">
+
+      <br>
+
+
+      <div class="content">
+        <select multiple="multiple" id="select1" style="width:100px; height:150px;">
+          <option value="1">选项1</option>
+          <option value="2">选项2</option>
+          <option value="3">选项3</option>
+          <option value="4">选项4</option>
+          <option value="5">选项5</option>
+          <option value="6">选项6</option>
+          <option value="7">选项7</option>
+        </div>
+      </select>
+      <div>
+        <span id="add">选中添加到右边&gt;&gt;</span>
+        <span id="add_all">全选添加到右边&gt;&gt;</span>
+      </div>
+    <div class="content">
+      <select name="" id="select2" multiple="multiple" style="width:100px; height:150px;">
+          <option value="8">选项8</option>
+        </select>
+      <div>
+        <span id="remove">&lt;&lt;选中删除到左边</span>
+        <span id="remove_all">&lt;&lt;全选删除到左边</span>
+      </div>
+    </div>    
+
+    <div class="bs-example">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="./jquery.js"></script>-->
+    <script>
+
+    $(function(){
+      var ta = $('#textarea1');
+
+      $('#large').click(function(){
+        if(!ta.is(":animated")){
+          if(ta.height()<500){
+            // ta.height(ta.height()+50);
+            ta.animate({height:"+=50"},400);
+          }
+        }
+      });
+
+      $('#small').click(function(){
+        if(!ta.is(":animated")){
+          if(ta.height()>50){
+            ta.animate({height:"-=50"},400);
+          }
+        }
+      });
+
+      $('#up').click(function(){
+        if(!ta.is(":animated")){
+          ta.animate({scrollTop:"-=50"}, 400)
+        }
+      });
+
+      $('#down').click(function(){
+        if(!ta.is(":animated")){
+          ta.animate({scrollTop:"+=50"}, 400)
+        }        
+      });
+
+      $('#selectAll').click(function(){
+        $('[name=items]:checkbox').prop('checked', true);
+      });
+
+      $('#selectNone').click(function(){
+        $('[type=checkbox]:checkbox').removeAttr('checked');
+      });
+
+      $('#opposite').click(function(){
+        $('[name=items]:checkbox').each(function(){
+          // $(this).attr("checked", !$(this).attr("checked"));
+          this.checked = !this.checked;
+        });
+      });
+
+      $('#add').click(function(){
+        $('#select1 option:selected').appendTo('#select2');
+      });
+
+      $('#remove').click(function(){
+        $('#select2 option:selected').appendTo('#select1');
+      });
+
+      $('#add_all').click(function(){
+        $('#select1 option').appendTo($('#select2'));
+      });
+
+      $('#remove_all').click(function(){
+        $('#select2 option').appendTo($('#select1'));
+      });
+
+      // var leftPos = (typeof window.screenLeft == "numbrer")?window.screenLeft:window.screenX;
+      // var topPos = (typeof window.screenTop == "numbrer")?window.screenTop:window.screenY;
+      // alert("leftPos="+leftPos+",topPos"+topPos);
+
+      // window.moveTo(0,0);
+
+      // var wid = document.documentElement.clientWidth ;
+      // var hei = document.documentElement.clientHeight;
+      // alert("wid="+wid+" hei="+hei);
+
+      var pagewidth = window.innerWidth,
+          pageHeight = window.innerHeight;
+
+      // if(typeof pageWidth != "number"){
+      //   if(document.compatMode == "CSS1Compat"){
+      //     pageWidth = document.documentElement.clientWidth;
+      //     pageHeight = document.documentElement.clientHeigth;
+      //   }else{
+      //     pageWidth = document.body.clientWidth;
+      //     pageHeight = document.body.clientHeight;
+      //   }
+      // }
+      // alert("pageWidth="+pageWidth+", pageHeight="+pageHeight);
+
+      // $('tr:nth-child(odd)').css("background", "grey");
+      $('tr:even').css("background", "red");
+      $('tr:odd').css("background", "grey");
+      
+
+
+
+    });
+    </script>
+  </body>
+</html>

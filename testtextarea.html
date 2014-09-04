@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>testtextarea</title>
+</head>
+<body>
+	<textarea name="tt" id="tt" cols="30" rows="10"></textarea>
+
+		<div class="status">
+			长度为：<span id="spend" class="spend">1</span> 不超过30 还能输入<span class="left"></span>
+		</div>
+		<p class="text"></p>
+	<script type="text/javascript">
+		var tt = document.getElementById("tt");
+		tt.onkeyup = function(){
+			var len = 30,
+				currentlen = getByteLen(tt.value),
+				leftlen = len - currentlen,
+				spend = document.getElementsByClassName("spend"),
+				// spend2 = document.getElementById('spend'),
+				left = document.getElementsByClassName("left");
+				console.log(spend[0]);
+				// console.log(spend2.length);
+			spend[0].innerHTML = currentlen;
+			left.innerHTML = leftlen;
+	}
+
+	var cn = "中", en = "e";
+
+	function getByteLen(val){    //传入一个字符串
+        var len = 0;
+        for (var i = 0; i < val.length; i++) {
+            if (val[i].match(/[^\x00-\xff]/ig) != null) //全角 
+                len += 2; //若是是全角，占用两个字节
+            else
+                len += 1; //半角占用一个字节
+        }
+        return len;
+     }   
+
+     function getByteLen2(str){
+     	str.replace(/[^\u4E00-\u9FA5]/ig, "aa");
+		return str.length;
+     }
+	 
+	//调用  
+/*	 if (getByteLen("追忆") < 3){ 
+		alert("长度不克不及小于3个字符");
+	}else{
+		alert("输入正确");
+	} */
+
+/*	alert(getByteLen("中"));
+	alert(getByteLen("z"))*/
+	</script>
+</body>
+</html>
